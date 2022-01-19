@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balance Sheet</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script src="main.js"></script>
+       
+  </head>
+  <body >
+    <main id="sheet">
+      <header id="header">
+        <h1>Balance Sheet</h1>
+       <input id="company-name" type="text" placeholder="enter company name">
+        <p class="row">
+          <input type="number" id="year1" placeholder="year">
+          <input type="number" id="year2" placeholder="year"> 
+          <input type="number" id="c-year" class="current" placeholder="current year"> 
+        </p>
+      </header>
+      <h2>Assets</h2>
+      <section class="section">
+        <p class="row">
+          <span class="name">Cash</span>
+          <span>$</span><input type="number" id="cash-1" class="row-number" oninput="sum()" value="0">
+          <span>$</span><input type="number" id="cash-2" class="row-number" oninput="sum()" value="0">
+          <span>$</span><input type="number" id="cash-3" class="current row-number" oninput="sum()" value="0">
+        </p>
+        <span class="notes">This is the cash we currently have on hand.</span>
+        <p class="row">
+          <span class="name">Checking</span>
+          <span>$</span><input type="number" id="ch-1" class="row-number" oninput="sum()" value="0">
+          <span>$</span><input type="number" id="ch-2" class="row-number" oninput="sum()" value="0">
+          <span>$</span><input type="number" id="ch-3" class="current row-number" oninput="sum()" value="0">
+        </p>
+        <span class="notes">Our primary transactional account.</span>
+        <p class="row">
+          <span class="name">Savings</span>
+          <span>$</span><input type="number" id="save-1" class="row-number" oninput="sum()" value="0">
+          <span>$</span><input type="number" id="save-2" class="row-number" oninput="sum()" value="0">
+          <span>$</span><input type="number" id="save-3" class="current row-number" oninput="sum()" value="0">
+        </p>
+        <span class="notes">Funds set aside for emergencies.</span>
+        <p class="row total" tabindex="1">
+          <span class="name">Total</span>
+          <span id="total-1" class="row-number total" oninput="sum()"></span>
+          <span id="total-2" class="row-number total" oninput="sum()"></span>
+          <span  id="total-3" class="current row-number total" oninput="sum()"></span>
+        </p>
+      </section>
+
+      <h2>Liabilities</h2>
+      <section class="section">
+        <p class="row">
+          <span class="name">Loans</span>
+          <span>$</span><input type="number" id="loan-1" class="row-number" oninput="sum()" value="0">
+          <span>$</span><input type="number" id="loan-2" class="row-number" oninput="sum()" value="0">
+          <span>$</span><input type="number" id="loan-3" class="current row-number" oninput="sum()" value="0">
+        </p>
+        <span class="notes">The outstanding balance on our startup loan.</span>
+        <p class="row">
+          <span class="name">Expenses</span>
+          <span>$</span><input type="number" id="exp-1" class="row-number" oninput="sum()" value="0">
+          <span>$</span><input type="number" id="exp-2" class="row-number" oninput="sum()" value="0">
+          <span>$</span><input type="number" id="exp-3" class="current row-number" oninput="sum()" value="0">
+        </p>
+        <span class="notes">Annual anticipated expenses, such as payroll.</span>
+        <p class="row">
+          <span class="name">Credit</span>
+          <span>$</span><input type="number" id="cre-1" class="row-number" oninput="sum()" value="0">
+          <span>$</span><input type="number" id="cre-2" class="row-number" oninput="sum()" value="0">
+          <span>$</span><input type="number" id="cre-3" class="current row-number" oninput="sum()" value="0">
+        </p>
+        <span class="notes">The running balance on our line of credit.</span>
+        <p class="row total" tabindex="1">
+          <span class="name">Total</span>
+          <span  id="t-1" class="row-number total" oninput="sum()"></span>
+          <span id="t-2" class="row-number total" oninput="sum()"></span>
+          <span id="t-3" class="current row-number total" oninput="sum()"></span>
+        </p>
+      </section>
+
+      <h2>Net Worth</h2>
+      <section class="section">
+        <p class="row total" tabindex="1">
+          <span class="name">Total</span>
+          <span id="final-1" class="row-number total" ></span>
+          <span id="final-2" class="row-number total" ></span>
+          <span id="final-3" class="current row-number total"></span>
+        </p>
+      </section>
+      
+      <button id="b" class="b-style" onclick="print()">Print</button>
+    </main>
+    <footer>Last Updated: <input id="footer" type="text" placeholder="e.g December 2021"></footer>
+  </body>
+</html>

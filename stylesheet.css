@@ -1,0 +1,110 @@
+body {
+    text-align: center;
+    font-family: Tahoma;
+    color: #0a0a23;
+  }
+
+  input[type=number]{
+    min-width: 5%;
+    max-width: 10%;
+ padding: 3px;
+ margin: 5px;
+ border-color:whitesmoke;
+  }
+  #company-name{
+    font-size: 15px;
+    border: none;
+  }
+
+  #sheet {
+    text-align: left;
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid #d0d0d5;
+  }
+  
+  .row:nth-child(odd) {
+    background-color: #dfdfe2;
+  }
+  
+  .row:last-child {
+    background-color: transparent;
+    margin-bottom: 40px;
+  }
+  
+  p[class~="total"] {
+    border-bottom: 4px double #0a0a23;
+    font-weight: bold;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #0a0a23;
+    padding: 4px;
+  }
+  
+  span:not(.name) {
+    margin-left: 30px;
+    text-align: right;
+  }
+  
+ .current {
+    font-style: italic;
+  }
+  
+  .name {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .row[tabindex]:hover {
+    background-color:wheat;
+  }
+  
+  .row[tabindex]:focus {
+    background-color:burlywood;
+    color: white;
+  }
+
+  p + span{
+    font-size :0.8em;
+    font-style : italic;
+    color : #3b3b4f;
+  }
+  .row-number{
+    height: 10px;
+    background: transparent;
+    border-width: .5px;
+    width: 100%;
+    }
+  #footer{
+    margin-top: 9px;
+    border: none;
+  }
+  input:hover, :focus{
+border-color:burlywood;
+outline: burlywood;
+}
+span.total{
+display: flex;
+justify-content: space-evenly;
+max-width: 13%;
+}
+
+.b-style{
+  float: right;
+  margin-top: -15px;
+border: none;
+cursor: pointer;
+height: 10%;  
+}
+.b-style:hover{
+  color:burlywood;
+  background-color:darkgoldenrod;
+}
+.b-style:focus{
+  color: white;
+  background-color: burlywood;
+}
